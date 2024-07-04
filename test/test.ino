@@ -56,8 +56,15 @@ void loop() {
 
   if (counter == 3) {
     Serial.println(value);
-    pwm.setPWM(4, 0, value); // Arguement order => (PWM Driver Pin, 0, val of servo)
+    pwm.setPWM(5, 0, value); // Arguement order => (PWM Driver Pin, 0, val of servo)
+    // pwm.setPWM(0, 1024, 3072);
     counter = 0;
     value = 0; // Reset value after using it
   }
 }
+
+
+// void homePos(){
+//     (PWM Driver Pin, 0, val of servo)
+//     pwm.setPWM(0, 0, value);
+// }
