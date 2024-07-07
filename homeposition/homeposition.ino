@@ -5,8 +5,8 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 uint16_t value = 0;  // Use uint16_t for a wider range of values
 uint8_t counter = 0;
 
-#define SERVOMIN  150 // This is the 'minimum' pulse length count (out of 4096)
-#define SERVOMAX  600 // This is the 'maximum' pulse length count (out of 4096)
+// #define SERVOMIN  150 // This is the 'minimum' pulse length count (out of 4096)
+// #define SERVOMAX  600 // This is the 'maximum' pulse length count (out of 4096)
 
 int homePosCheck =0;
 int i =0;
@@ -15,10 +15,8 @@ void setup() {
 
   Serial.println("------------------------");
   Serial.println("Servo Home Position v1.0a");
-  // Serial.println("Enter Servo Value");
-  // Serial.println("If its 2 digit values enter it with 0 as prefix");
-  // Serial.println("Eg: for 90, type 090");
   Serial.println("------------------------");
+
 
   pwm.begin();
   pwm.setOscillatorFrequency(27000000);
